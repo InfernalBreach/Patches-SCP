@@ -34,7 +34,7 @@ namespace InfernalPatches
                 new CodeInstruction(OpCodes.Callvirt, PropertyGetter(typeof(PlayerRoleManager), nameof(PlayerRoleManager.CurrentRole))),
                 new CodeInstruction(OpCodes.Callvirt, Method(typeof(List<RoleTypeId>), nameof(List<RoleTypeId>.Contains))),
                 new CodeInstruction(OpCodes.Brfalse_S, lab),
-                new CodeInstruction(OpCodes.Ret).WithLabels(lab)
+                new CodeInstruction(OpCodes.Ret)
             });
 
             for (int i = 0; i < newInst.Count; i++)
