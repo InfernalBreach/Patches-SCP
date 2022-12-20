@@ -33,42 +33,30 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="0Harmony">
-          <HintPath>..\..\GamemodeCore\GamemodeCore\bin\Debug\0Harmony.dll</HintPath>
-        </Reference>
         <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\Assembly-CSharp-Publicized.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\Assembly-CSharp-firstpass.dll</HintPath>
-        </Reference>
-        <Reference Include="CommandSystem.Core">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\CommandSystem.Core.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
         <Reference Include="Mirror">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\Mirror_publicized.dll</HintPath>
-        </Reference>
-        <Reference Include="NorthwoodLib">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\NorthwoodLib.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\Mirror_publicized.dll</HintPath>
         </Reference>
         <Reference Include="PluginAPI">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\PluginAPI.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\PluginAPI.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
         <Reference Include="UnityEngine">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.AnimationModule">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.AnimationModule.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.CoreModule.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.PhysicsModule">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.PhysicsModule.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.PhysicsModule.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>

@@ -32,57 +32,53 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="0Harmony">
-          <HintPath>..\..\..\Downloads\Exiled-EA-main (2)\Exiled-EA-main\bin\Release\0Harmony.dll</HintPath>
-        </Reference>
         <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\Assembly-CSharp-Publicized.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\Assembly-CSharp-firstpass.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
         <Reference Include="CommandSystem.Core">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\CommandSystem.Core.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\CommandSystem.Core.dll</HintPath>
         </Reference>
         <Reference Include="GamemodeCore">
-          <HintPath>..\..\GamemodeCore\GamemodeCore\bin\Debug\GamemodeCore.dll</HintPath>
+          <HintPath>C:\Users\usuario\RiderProjects\GamemodeCore\GamemodeCore\bin\Debug\GamemodeCore.dll</HintPath>
         </Reference>
         <Reference Include="InfernalExtensions">
           <HintPath>..\InfernalExtensions\bin\Debug\InfernalExtensions.dll</HintPath>
         </Reference>
         <Reference Include="Mirror">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\Mirror_publicized.dll</HintPath>
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\Mirror_publicized.dll</HintPath>
         </Reference>
         <Reference Include="NorthwoodLib">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\NorthwoodLib.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\NorthwoodLib.dll</HintPath>
         </Reference>
-        <Reference Include="PluginAPI">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\PluginAPI.dll</HintPath>
+        <Reference Include="PluginAPI, Version=12.0.0.0, Culture=neutral, processorArchitecture=Amd64">
+          <HintPath>..\packages\Northwood.PluginAPI.12.0.0-rc.4\lib\net48\PluginAPI.dll</HintPath>
         </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
         <Reference Include="UnityEngine">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.AnimationModule">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.AnimationModule.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.CoreModule.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
-        <Reference Include="UnityEngine.PhysicsModule">
-          <HintPath>..\..\..\Desktop\EXILED VISUAL STUDIO\Universe Refs\UnityEngine.PhysicsModule.dll</HintPath>
+        <Reference Include="YamlDotNet, Version=11.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+          <HintPath>..\packages\YamlDotNet.11.0.1\lib\net45\YamlDotNet.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Component.cs" />
         <Compile Include="EventHandlers.cs" />
         <Compile Include="Extensions.cs" />
-        <Compile Include="HintPatch.cs" />
         <Compile Include="MainClass.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

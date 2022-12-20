@@ -34,10 +34,10 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="Assembly-CSharp">
-          <HintPath>..\..\..\Downloads\Assembly-CSharp-Publicized.dll</HintPath>
+          <HintPath>C:\Users\usuario\RiderProjects\PluginsInfernal\InfernalExtensions\bin\Debug\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
         <Reference Include="DSharp4Webhook">
-          <HintPath>..\..\..\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\DSharp4Webhook.dll</HintPath>
+          <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\DSharp4Webhook.dll</HintPath>
         </Reference>
         <Reference Include="PluginAPI, Version=12.0.0.0, Culture=neutral, processorArchitecture=Amd64">
           <HintPath>..\packages\Northwood.PluginAPI.12.0.0-rc.2\lib\net48\PluginAPI.dll</HintPath>
