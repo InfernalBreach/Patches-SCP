@@ -57,7 +57,7 @@ namespace InfernalPatches
             
             if (role is RoleTypeId.Scp939)
             {
-                var playerMaxStamina = typeof(Player).GetProperty("MaxValue", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+                var playerMaxStamina = typeof(StaminaStat).GetProperty("MaxValue", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
                 var maxStamina = playerMaxStamina?.GetValue(this);
                 
                 playerMaxStamina?.SetValue(maxStamina, 2f);
