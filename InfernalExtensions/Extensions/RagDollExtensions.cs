@@ -6,34 +6,34 @@ using UnityEngine;
 
 namespace InfernalExtensions.Extensions
 {
-    public class RagDollExtensions
+    public static class RagDollExtensions
     {
         public static int CleanUpTime
         {
             get => RagdollManager.CleanupTime;
             set => RagdollManager.CleanupTime = value;
         }
-        public bool AllowCleanUp => NetworkInfo.ExistenceTime < CleanUpTime;
+        public static bool AllowCleanUp => NetworkInfo.ExistenceTime < CleanUpTime;
         
-        public BasicRagdoll Base { get; }
+        public static BasicRagdoll Base { get; }
         
-        public GameObject GameObject => Base.gameObject;
+        public static GameObject GameObject => Base.gameObject;
         
-        public RagdollData NetworkInfo
+        public static RagdollData NetworkInfo
         {
             get => Base.NetworkInfo;
             set => Base.NetworkInfo = value;
         }
-        public bool IsCleanedUp => Base._cleanedUp;
+        public static bool IsCleanedUp => Base._cleanedUp;
         
-        public string Name => Base.name;
-        public DateTime CreationTime => new((long)NetworkInfo.CreationTime);
+        public static string Name => Base.name;
+        public static DateTime CreationTime => new((long)NetworkInfo.CreationTime);
         
-        public RoleTypeId Role => NetworkInfo.RoleType;
+        public static RoleTypeId Role => NetworkInfo.RoleType;
         
-        public bool AllowRecall => NetworkInfo.ExistenceTime > PlayerRoles.PlayableScps.Scp049.Scp049ResurrectAbility.HumanCorpseDuration;
+        public static bool AllowRecall => NetworkInfo.ExistenceTime > PlayerRoles.PlayableScps.Scp049.Scp049ResurrectAbility.HumanCorpseDuration;
         
-        public Vector3 Position
+        public static Vector3 Position
         {
             get => Base.transform.position;
             set
@@ -45,7 +45,7 @@ namespace InfernalExtensions.Extensions
                 NetworkServer.Spawn(GameObject);
             }
         }
-        public Quaternion Rotation
+        public static Quaternion Rotation
         {
             get => Base.transform.rotation;
             set
@@ -57,7 +57,7 @@ namespace InfernalExtensions.Extensions
                 NetworkServer.Spawn(GameObject);
             }
         }
-        public Vector3 Scale
+        public static Vector3 Scale
         {
             get => Base.transform.localScale;
             set
@@ -69,6 +69,6 @@ namespace InfernalExtensions.Extensions
                 NetworkServer.Spawn(GameObject);
             }
         }
-        public override string ToString() => $"{Base.Info.OwnerHub} ({Name}) [{Base.Info.Handler.ServerLogsText}] *{Role}* |{CreationTime}| ={AllowRecall}=";
+        public static string ToString() => $"{Base.Info.OwnerHub} ({Name}) [{Base.Info.Handler.ServerLogsText}] *{Role}* |{CreationTime}| ={AllowRecall}=";
     }
 }
