@@ -34,6 +34,12 @@ namespace InfernalExtensions.Extensions
         
         public static NetworkIdentity NetworkIdentity => ReferenceHub.networkIdentity;
         
+        public static Player Get(GameObject gameObject) => Dictionary.TryGetValue(gameObject, out var player) ? player : null;
+        
+        public static Player Get(ReferenceHub hub) => Get(hub.gameObject);
+        
+        public static bool TryGet(ReferenceHub hub, out Player player) => Dictionary.TryGetValue(hub.gameObject, out player);
+        
         public static bool IsInvisible
         {
             get => RoleExtensions.FirstPersonController.FpcModule.Motor.IsInvisible;
