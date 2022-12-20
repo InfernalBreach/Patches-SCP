@@ -81,7 +81,6 @@
         <Compile Include="CandyPinkAdder.cs" />
         <Compile Include="Common\PreAuth.cs" />
         <Compile Include="ConnectionRequestPatch.cs" />
-        <Compile Include="HintPatch.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Scp207NoScpDamage.cs" />
         <Compile Include="Scp939StaminaPatch.cs" />
