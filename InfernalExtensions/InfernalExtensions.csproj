@@ -65,6 +65,7 @@
         <Compile Include="Extensions\RagDollExtensions.cs" />
         <Compile Include="Extensions\RoleExtensions.cs" />
         <Compile Include="Extensions\RoundExtensions.cs" />
+        <Compile Include="Extensions\SCPs\Scp939Extensions.cs" />
         <Compile Include="Extensions\ServerExtensions.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
