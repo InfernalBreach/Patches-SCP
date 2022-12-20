@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixTutorialPosition", "FixT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfernalPatches", "InfernalPatches\InfernalPatches.csproj", "{290E6DAD-9719-4466-A476-97EA4CDC0F36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchProcessor", "PatchProcessor\PatchProcessor.csproj", "{15219BF3-ADEF-4F03-BD60-A94B91DACE1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{290E6DAD-9719-4466-A476-97EA4CDC0F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{290E6DAD-9719-4466-A476-97EA4CDC0F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{290E6DAD-9719-4466-A476-97EA4CDC0F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15219BF3-ADEF-4F03-BD60-A94B91DACE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15219BF3-ADEF-4F03-BD60-A94B91DACE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15219BF3-ADEF-4F03-BD60-A94B91DACE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15219BF3-ADEF-4F03-BD60-A94B91DACE1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
