@@ -74,6 +74,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CandyPinkAdder.cs" />
         <Compile Include="HintPatch.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Scp939StaminaPatch.cs" />
