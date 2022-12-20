@@ -40,9 +40,11 @@ namespace PatchProcessor
                 }
                 
                 var harmony = new Harmony("patches.invoker.infernal");
-                
+
                 foreach (var patchClass in patchClasses)
-                    harmony.PatchAll();
+                {
+                    harmony.PatchAll(patchClass.Assembly);
+                }
             }
             catch (Exception ex)
             {

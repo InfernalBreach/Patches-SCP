@@ -31,7 +31,6 @@ namespace InfernalPatches
             
             Label label = generator.DefineLabel();
             
-            // Instrucciones
             newInstructions.InsertRange(0, new[]
             {
                 new CodeInstruction(OpCodes.Ldarg_0),
@@ -40,7 +39,6 @@ namespace InfernalPatches
                 new CodeInstruction(OpCodes.Brtrue_S, label),
             });
             
-            // Si NewStaminaProccess devuelve true, se skipea el codigo original para el Scp939
             for (int i = 0; i < newInstructions.Count; i++)
             {
                 if (newInstructions[i].opcode == OpCodes.Ldarg_0 && newInstructions[i + 1].opcode == OpCodes.Ldfld && newInstructions[i + 2].opcode == OpCodes.Ldfld && newInstructions[i + 3].opcode == OpCodes.Ldc_R4 && newInstructions[i + 4].opcode == OpCodes.Ble_Un_S)
@@ -59,10 +57,10 @@ namespace InfernalPatches
             
             if (role is RoleTypeId.Scp939)
             {
-                var playerMaxStamina = typeof(StaminaStat).GetProperty("MaxValue", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+                var playerMaxStamina = typeof(Player).GetProperty("MaxValue", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
                 var maxStamina = playerMaxStamina?.GetValue(this);
                 
-                playerMaxStamina?.SetValue(this, 2f);
+                playerMaxStamina?.SetValue(maxStamina, 2f);
             }
         }
     }
