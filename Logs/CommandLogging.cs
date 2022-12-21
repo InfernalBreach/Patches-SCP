@@ -19,7 +19,7 @@ namespace Logs
 
                 Player player = sender is PlayerCommandSender playerCommandSender
                     ? Player.Get(playerCommandSender.ReferenceHub)
-                    : null;
+                    : Server.Instance;
 
                 if(player != null)
                     WebhookSender.AddMessage($"{sender.Nickname.DiscordParse()} ({sender.SenderId ?? "Srv"}) >> **`{q}`**", WebhookType.CommandLogs);

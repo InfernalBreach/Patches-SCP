@@ -109,6 +109,9 @@ public class EventHandlers
     [PluginEvent(ServerEventType.PlayerDeath)]
     public void OnDying(Player player, Player attacker, DamageHandlerBase damageHandler)
     {
-        WebhookSender.AddMessage($"`Muerte ☠` >> {attacker.Nickname.DiscordParse()} ({attacker.Role}) ha matado a {player.Nickname.DiscordParse()} con {damageHandler}", WebhookType.GameLogs);
+        if (player == null || attacker == null || damageHandler == null)
+            return;
+        
+        WebhookSender.AddMessage($"`Muerte ☠` >> {attacker.Nickname.DiscordParse()} ({attacker.Role}) ha matado a {player.Nickname.DiscordParse()}", WebhookType.GameLogs);
     }
 }
