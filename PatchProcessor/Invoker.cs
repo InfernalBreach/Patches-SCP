@@ -1,11 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
-using PluginAPI.Helpers;
 
 namespace PatchProcessor
 {
@@ -66,6 +64,8 @@ namespace PatchProcessor
                             }
                         }
                     }
+                    Log.Info("Metodo Parcheado: " + harmonyPatch?.info?.methodType + " " + harmonyPatch?.info?.methodName);
+                    Log.Info("Type Parcheado: " + harmonyPatch?.info?.declaringType);
                 }
             }
             catch (Exception ex)
