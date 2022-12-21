@@ -20,13 +20,19 @@ public class EventHandlers
     [PluginEvent(ServerEventType.PlayerInteractDoor)]
     public void OnDoorInteract(Player player, DoorVariant door, bool canOpen)
     {
+        if (player is null)
+            return;
+        
         WebhookSender.AddMessage(
-            $"`Interaccion 🚪` >> {player.Nickname.DiscordParse()} ha interactuado con la puerta {door} [{(canOpen ? "No esta bloqueada" : "Esta bloqueada")}]", WebhookType.GameLogs);
+            $"`Interaccion 🚪` >> {player.Nickname.DiscordParse()} ha interactuado con una puerta", WebhookType.GameLogs);
     }
 
     [PluginEvent(ServerEventType.PlayerChangeRole)]
     public void OnChangingRole(Player player, PlayerRoleBase oldRole, RoleTypeId newRole, RoleChangeReason changeReason)
     {
+        if (player is null)
+            return;
+        
         WebhookSender.AddMessage($"`Role 🎭` >> {player.Nickname.DiscordParse()} ha cambiado de role a {newRole} [Era {oldRole.RoleTypeId}]", WebhookType.GameLogs);
     }
 
@@ -63,12 +69,18 @@ public class EventHandlers
     [PluginEvent(ServerEventType.PlayerInteractElevator)]
     public void OnElevatorInteract(Player player)
     {
+        if (player is null)
+            return;
+        
         WebhookSender.AddMessage($"`Interaccion 🚪` >> {player.Nickname.DiscordParse()} ha interactuado con un ascensor", WebhookType.GameLogs);
     }
 
     [PluginEvent(ServerEventType.Scp914KnobChange)]
     public void OnChangeKnob(Player player)
     {
+        if (player is null)
+            return;
+        
         WebhookSender.AddMessage($"`SCP-914 🎛️` >> {player.Nickname.DiscordParse()} ha cambiado el modo de la 914", WebhookType.GameLogs);
     }
 
@@ -85,19 +97,28 @@ public class EventHandlers
     [PluginEvent(ServerEventType.PlayerSearchedPickup)]
     public void OnPickingItem(Player player, ItemPickupBase item)
     {
+        if (player is null)
+            return;
+        
         WebhookSender.AddMessage($"`Interaccion 📦` >> {player.Nickname.DiscordParse()} ha recogido {item.Info.ItemId} [{item.Info.Serial}]", WebhookType.GameLogs);
     }
 
     [PluginEvent(ServerEventType.WarheadStart)]
     public void OnStartWarhead(bool isAutomatic, Player player)
     {
-        WebhookSender.AddMessage($"`Nuke ☢` >> {player.Nickname.DiscordParse()} ha iniciado la detonacion de la nuke [{(isAutomatic ? "No es detonacion automatica" : "Es detonacion automatica")}]", WebhookType.GameLogs);
+        if (player is null)
+            return;
+        
+        WebhookSender.AddMessage($"`Nuke ☢` >> {player.Nickname.DiscordParse()} ha iniciado la detonacion de la Warhead", WebhookType.GameLogs);
     }
 
     [PluginEvent(ServerEventType.WarheadStop)]
     public void OnStopWarhead(Player player)
     {
-        WebhookSender.AddMessage($"`Nuke ☢` >> {player.Nickname.DiscordParse()} ha detenido la detonacion de la nuke", WebhookType.GameLogs);
+        if (player is null)
+            return;
+        
+        WebhookSender.AddMessage($"`Nuke ☢` >> {player.Nickname.DiscordParse()} ha detenido la detonacion de la Warhead", WebhookType.GameLogs);
     }
 
     [PluginEvent(ServerEventType.TeamRespawn)]

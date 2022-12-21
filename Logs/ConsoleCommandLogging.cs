@@ -5,11 +5,11 @@ using RemoteAdmin;
 
 namespace Logs;
 
-[HarmonyPatch(typeof(QueryProcessor), nameof(QueryProcessor.ProcessGameConsoleQuery))]
+/*[HarmonyPatch(typeof(QueryProcessor), nameof(QueryProcessor.ProcessGameConsoleQuery))]
 public static class ConsoleCommandLogging
 {
     [HarmonyPrefix]
-    public static void Prefix(RemoteAdmin.QueryProcessor __instance, string query) 
+    public static void Prefix(QueryProcessor __instance, string query) 
     {
         try
         {
@@ -22,4 +22,4 @@ public static class ConsoleCommandLogging
             Log.Error(e.ToString());
         }
     }
-}
+}*/

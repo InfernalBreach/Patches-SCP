@@ -5,7 +5,7 @@ using RemoteAdmin;
 
 namespace Logs
 {
-    [HarmonyPatch(typeof(CommandProcessor), nameof(CommandProcessor.ProcessQuery))]
+    /*[HarmonyPatch(typeof(CommandProcessor), nameof(CommandProcessor.ProcessQuery))]
     public static class CommandLogging
     {
         [HarmonyPrefix]
@@ -29,5 +29,5 @@ namespace Logs
                 Log.Error(e.ToString());
             }
         }
-    }
+    }*/
 }
