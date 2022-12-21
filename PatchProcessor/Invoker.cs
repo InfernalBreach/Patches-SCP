@@ -17,33 +17,55 @@ namespace PatchProcessor
             InvokePatches();
         }
 
+        [PluginUnload]
+        public void Unload()
+        {
+            
+        }
+
         public void InvokePatches()
         {
             Log.Info("Invocando parches...");
 
             try
             {
+                var harmony = new Harmony("patches.invoker.infernal");
+                
                 var assembly = Assembly.Load("InfernalPatches");
                 var types = assembly.GetTypes();
-                var patchClasses = types.Where(t => t.GetCustomAttributes(typeof(HarmonyPatch), false).Length > 0);
+                var patchClasses = types.Where(t => t.GetCustomAttributes(typeof(HarmonyPatch), true).Length > 0);
                 
-                if (!patchClasses.Any())
-                {
-                    Log.Info("No se encontraron parches");
-                    return;
-                }
-                
-                if (assembly.Location != Path.Combine(Paths.Plugins))
-                {
-                    Log.Error("No se ha encontrado el .dll de parches");
-                    return;
-                }
-                
-                var harmony = new Harmony("patches.invoker.infernal");
-
                 foreach (var patchClass in patchClasses)
                 {
-                    harmony.PatchAll(patchClass.Assembly);
+                    var harmonyPatch = patchClass.GetCustomAttributes(typeof(HarmonyPatch), true)[0] as HarmonyPatch;
+                    var patchMethods = patchClass.GetMethods().Where(m => m.GetCustomAttributes(typeof(HarmonyPatch), true).Length > 0);
+                    foreach (var patchMethod in patchMethods)
+                    {
+                        var harmonyPatchMethod = patchMethod.GetCustomAttributes(typeof(HarmonyPatch), true)[0] as HarmonyPatch;
+                        var patch = new HarmonyMethod(patchMethod);
+                        if (harmonyPatchMethod != null)
+                        {
+                            if (harmonyPatchMethod.info != null)
+                            {
+                                patch = new HarmonyMethod(harmonyPatchMethod.info.method);
+                            }
+                            else if (harmonyPatchMethod.info?.declaringType != null)
+                            {
+                                patch = new HarmonyMethod(harmonyPatchMethod.info?.declaringType, harmonyPatchMethod.info?.methodName);
+                            }
+                        }
+                        if (harmonyPatch != null)
+                        {
+                            if (harmonyPatch.info != null)
+                            {
+                                harmony.Patch(harmonyPatch.info.method, patch);
+                            }
+                            else if (harmonyPatch.info?.declaringType != null)
+                            {
+                                harmony.Patch(harmonyPatch.info.method, harmonyPatch.info, patch);
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)

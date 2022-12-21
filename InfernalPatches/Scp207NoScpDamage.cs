@@ -16,7 +16,6 @@ namespace InfernalPatches
             var newInst = instructions.ToList();
 
             var index = newInst.FindIndex(x => x.opcode == OpCodes.Ret);
-            var brindex = newInst.FindIndex(x => x.opcode == OpCodes.Brtrue_S);
             var exitlabel = newInst[index + 1].labels[0];
             var newlabel = generator.DefineLabel();
             
