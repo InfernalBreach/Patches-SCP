@@ -94,6 +94,7 @@
         <Compile Include="Scp207NoScpDamage.cs" />
         <Compile Include="Scp2536GiftInteract.cs" />
         <Compile Include="Scp559Interact.cs" />
+        <Compile Include="Scp956Interact.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
