@@ -66,9 +66,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="CommandLogging.cs" />
         <Compile Include="Config.cs" />
-        <Compile Include="ConsoleCommandLogging.cs" />
         <Compile Include="EventHandlers.cs" />
         <Compile Include="MainClass.cs" />
         <Compile Include="Message.cs" />

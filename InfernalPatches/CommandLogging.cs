@@ -2,10 +2,11 @@
 using HarmonyLib;
 using PluginAPI.Core;
 using RemoteAdmin;
+using Logs;
 
-namespace Logs
+namespace InfernalPatches
 {
-    /*[HarmonyPatch(typeof(CommandProcessor), nameof(CommandProcessor.ProcessQuery))]
+    [HarmonyPatch(typeof(CommandProcessor), nameof(CommandProcessor.ProcessQuery))]
     public static class CommandLogging
     {
         [HarmonyPrefix]
@@ -18,7 +19,7 @@ namespace Logs
                     return;
 
                 Player player = sender is PlayerCommandSender playerCommandSender
-                    ? Player.Get(playerCommandSender.ReferenceHub)
+                    ? Player.Get<Player>(playerCommandSender.ReferenceHub)
                     : Server.Instance;
 
                 if(player != null)
@@ -29,5 +30,5 @@ namespace Logs
                 Log.Error(e.ToString());
             }
         }
-    }*/
+    }
 }

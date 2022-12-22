@@ -15,9 +15,7 @@ namespace Logs
         public void Load()
         {
             singleton = this;
-            harmony = new Harmony("logs.nexus.infernal");
-            harmony.PatchAll();
-            
+
             WebhookSender.AddMessage("`SERVIDOR BETA CONECTADO ✨`", WebhookType.GameLogs);
             
             Timing.RunCoroutine(WebhookSender.ManageQueue());
@@ -31,7 +29,6 @@ namespace Logs
             EventManager.UnregisterEvents<EventHandlers>(this);
             
             singleton = null;
-            harmony.UnpatchAll(harmony.Id);
         }
         
         [PluginConfig] public Config Config;
