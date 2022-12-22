@@ -49,7 +49,7 @@ public class EventHandlers
     }
 
     [PluginEvent(ServerEventType.RoundEnd)]
-    public void OnRoundEnd()
+    public void OnRoundEnd(RoundSummary.LeadingTeam leadingTeam)
     {
         WebhookSender.AddMessage("`🏁🔴🏁 Ronda Finalizada!`", WebhookType.GameLogs);
     }

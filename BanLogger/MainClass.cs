@@ -1,4 +1,5 @@
-﻿using PluginAPI.Core;
+﻿using CommandSystem;
+using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;
 using PluginAPI.Events;
@@ -20,11 +21,11 @@ public class MainClass
     [PluginConfig] 
     public Config Config;
 
-    [PluginEvent(ServerEventType.PlayerBanned)]
-    public void OnBanned(Player player, Player issuer, string reason, long duration)
+    /*[PluginEvent(ServerEventType.PlayerBanned)]
+    public void OnBanned(Player player, ICommandSender issuer, string reason, long duration)
     {
         WebhookController.SendMessage(new BanInfo(issuer, player.Nickname, player.UserId, reason, duration));
-    }
+    }*/
 
     [PluginEvent(ServerEventType.PlayerKicked)]
     public void OnKicked(Player player, Player issuer, string reason)

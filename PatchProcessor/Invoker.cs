@@ -41,6 +41,7 @@ namespace PatchProcessor
                     {
                         var harmonyPatchMethod = patchMethod.GetCustomAttributes(typeof(HarmonyPatch), true)[0] as HarmonyPatch;
                         var patch = new HarmonyMethod(patchMethod);
+
                         if (harmonyPatchMethod != null)
                         {
                             if (harmonyPatchMethod.info != null)

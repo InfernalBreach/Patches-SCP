@@ -45,6 +45,9 @@
         <Reference Include="Mirror">
           <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\Mirror_publicized.dll</HintPath>
         </Reference>
+        <Reference Include="PluginAPI">
+          <HintPath>C:\Users\usuario\Downloads\PluginAPI.dll</HintPath>
+        </Reference>
         <Reference Include="PluginAPI, Version=12.0.0.0, Culture=neutral, processorArchitecture=Amd64">
           <HintPath>..\packages\Northwood.PluginAPI.12.0.0-rc.5\lib\net48\PluginAPI.dll</HintPath>
         </Reference>

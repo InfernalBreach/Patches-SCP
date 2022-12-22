@@ -36,6 +36,9 @@
         <Reference Include="Assembly-CSharp">
           <HintPath>C:\Users\usuario\RiderProjects\PluginsInfernal\InfernalExtensions\bin\Debug\Assembly-CSharp-Publicized.dll</HintPath>
         </Reference>
+        <Reference Include="CommandSystem.Core">
+          <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\CommandSystem.Core.dll</HintPath>
+        </Reference>
         <Reference Include="DSharp4Webhook">
           <HintPath>C:\Users\usuario\source\repos\XSCP CORE\XSCP Core 3_.0_.0\bin\Debug\DSharp4Webhook.dll</HintPath>
         </Reference>
