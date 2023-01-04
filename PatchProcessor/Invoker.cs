@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using ColorLibSL.Core;
 using HarmonyLib;
 using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
@@ -18,7 +19,7 @@ namespace PatchProcessor
         [PluginUnload]
         public void Unload()
         {
-            
+            ClearPatches();
         }
 
         public void InvokePatches()
@@ -65,13 +66,26 @@ namespace PatchProcessor
                             }
                         }
                     }
-                    Log.Info("Metodo Parcheado: " + harmonyPatch?.info?.methodType + " " + harmonyPatch?.info?.methodName);
-                    Log.Info("Type Parcheado: " + harmonyPatch?.info?.declaringType);
+                    Log.Info($"{LogUtils.GetColor(LogColor.Blue)}Metodo Parcheado: " + harmonyPatch?.info?.methodType + " " + harmonyPatch?.info?.methodName);
+                    Log.Info($"{LogUtils.GetColor(LogColor.Blue)}Type Parcheado: " + harmonyPatch?.info?.declaringType);
                 }
             }
             catch (Exception ex)
             {
-                Log.Error("Error al invocar los parches: " + ex);
+                Log.Error($"{LogUtils.GetColor(LogColor.BrightRed)}Error al invocar los parches: " + ex);
+            }
+        }
+
+        public void ClearPatches()
+        {
+            try
+            {
+                var harmony = new Harmony("patches.invoker.infernal");
+                harmony.UnpatchAll("patches.invoker.infernal");
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{LogUtils.GetColor(LogColor.BrightRed)}Error al limpiar los parches: " + ex);
             }
         }
     }

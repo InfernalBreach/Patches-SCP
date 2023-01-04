@@ -41,6 +41,9 @@
         <Reference Include="Assembly-CSharp-firstpass">
           <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
+        <Reference Include="ColorLibSL">
+          <HintPath>C:\Users\usuario\RiderProjects\ColorLibSL\ColorLibSL\bin\Debug\ColorLibSL.dll</HintPath>
+        </Reference>
         <Reference Include="Mirror">
           <HintPath>C:\Users\usuario\Desktop\EXILED VISUAL STUDIO\Universe Refs\Mirror_publicized.dll</HintPath>
         </Reference>
