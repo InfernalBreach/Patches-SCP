@@ -13,7 +13,7 @@ namespace InfernalPatches
         {
             List<CodeInstruction> newInstructions = ListPool<CodeInstruction>.Shared.Rent(instructions);
 
-            newInstructions[newInstructions.FindIndex(x => x.opcode == OpCodes.Ldc_R4)].operand = 0.2f;
+            newInstructions[newInstructions.FindIndex(x => x.opcode == OpCodes.Ldc_R4)].operand = 0.1f;
 
             for (int z = 0; z < newInstructions.Count; z++)
                 yield return newInstructions[z];
